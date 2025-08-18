@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvt3dsg52tvce"]
+[gd_scene load_steps=4 format=3 uid="uid://cvt3dsg52tvce"]
 
 [ext_resource type="PackedScene" uid="uid://dlsviwhurunr2" path="res://escenas/mapabase.tscn" id="1_fxic2"]
-[ext_resource type="PackedScene" uid="uid://dwfsn6v5enmrd" path="res://Characters/dante.tscn" id="2_tsmr2"]
+[ext_resource type="PackedScene" uid="uid://dwfsn6v5enmrd" path="res://Characters/Personajes-importantes/dante.tscn" id="2_tsmr2"]
+[ext_resource type="PackedScene" uid="uid://7rkqsekniy52" path="res://Characters/enemigos-beta/enemigo_infierno_beta.tscn" id="3_tsmr2"]
 
 [node name="Primer-Mapa" type="Node2D"]
 
@@ -10,4 +11,9 @@ position = Vector2(86, -2)
 scale = Vector2(2, 2)
 
 [node name="Dante" parent="." instance=ExtResource("2_tsmr2")]
-position = Vector2(-39, -7)
+position = Vector2(328, -26)
+up_direction = Vector2(0, 1)
+
+[node name="Enemigo-infierno-beta" parent="." instance=ExtResource("3_tsmr2")]
+position = Vector2(-56, -79)
+scale = Vector2(0.75, 0.75)

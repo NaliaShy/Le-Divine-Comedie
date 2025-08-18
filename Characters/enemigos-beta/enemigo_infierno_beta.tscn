@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://7rkqsekniy52"]
+
+[ext_resource type="Script" uid="uid://cn7jp3mc7doyy" path="res://Characters/enemigos-beta/enemigo_infierno_beta.gd" id="1_fw7io"]
+[ext_resource type="SpriteFrames" uid="uid://d3mg14ldcdrv" path="res://Characters/enemigos-beta/enemigo_infierno_beta.tres" id="1_xi3m6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgc16"]
+size = Vector2(36, 42)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jo3t8"]
+radius = 42.107
+
+[node name="Enemigo-infierno-beta" type="CharacterBody2D"]
+script = ExtResource("1_fw7io")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wgc16")
+
+[node name="Detectar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detectar"]
+shape = SubResource("CircleShape2D_jo3t8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12, -11)
+sprite_frames = ExtResource("1_xi3m6")
+animation = &"attack"
+
+[connection signal="body_entered" from="Detectar" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Detectar" to="." method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_AnimatedSprite2D_animation_finished"]
