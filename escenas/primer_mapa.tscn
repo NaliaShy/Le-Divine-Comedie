@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvt3dsg52tvce"]
+
+[ext_resource type="PackedScene" uid="uid://dlsviwhurunr2" path="res://escenas/mapabase.tscn" id="1_fxic2"]
+[ext_resource type="PackedScene" uid="uid://dwfsn6v5enmrd" path="res://Characters/dante.tscn" id="2_tsmr2"]
+
+[node name="Primer-Mapa" type="Node2D"]
+
+[node name="mapabase" parent="." instance=ExtResource("1_fxic2")]
+position = Vector2(86, -2)
+scale = Vector2(2, 2)
+
+[node name="Dante" parent="." instance=ExtResource("2_tsmr2")]
+position = Vector2(-39, -7)
