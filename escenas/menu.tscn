@@ -1,0 +1,164 @@
+[gd_scene load_steps=9 format=3 uid="uid://bys5uw07ak13t"]
+
+[ext_resource type="Script" uid="uid://diaqdmhxmxn8k" path="res://Scripts/menu.gd" id="1_vdanu"]
+[ext_resource type="Texture2D" uid="uid://dnxh5olsujtwn" path="res://img/Menu bg/bg_menu.png" id="2_2owot"]
+[ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://img/negro.jpg" id="2_d7r87"]
+
+[sub_resource type="Theme" id="Theme_6cq3m"]
+default_font_size = 0
+
+[sub_resource type="Animation" id="Animation_5t3kx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6cq3m"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.61918, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lgifv"]
+resource_name = "fade_out_gam"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.61918, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_56ah5"]
+_data = {
+&"RESET": SubResource("Animation_5t3kx"),
+&"fade_out": SubResource("Animation_6cq3m"),
+&"fade_out_gam": SubResource("Animation_lgifv")
+}
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdanu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2owot")
+expand_mode = 1
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+initial_position = 1
+size = Vector2i(281, 101)
+visible = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 277.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Escriba su nombre"
+
+[node name="LineEdit" type="LineEdit" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="acceptar" type="Button" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+text = "Aceptar"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -536.693
+offset_top = -50.5
+offset_right = -255.808
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Nueva partida" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_6cq3m")
+text = "Nueva partida"
+alignment = 0
+
+[node name="Opciones" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_6cq3m")
+disabled = true
+text = "Opciones"
+alignment = 0
+
+[node name="Salir" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_6cq3m")
+text = "Salir
+"
+alignment = 0
+
+[node name="negro" type="Sprite2D" parent="."]
+position = Vector2(573, 350)
+texture = ExtResource("2_d7r87")
+
+[node name="fade-out" type="AnimationPlayer" parent="negro"]
+libraries = {
+&"": SubResource("AnimationLibrary_56ah5")
+}
+autoplay = "fade_out"
+
+[connection signal="pressed" from="PopupPanel/VBoxContainer/acceptar" to="." method="_on_acceptar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Nueva partida" to="." method="_on_nueva_partida_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

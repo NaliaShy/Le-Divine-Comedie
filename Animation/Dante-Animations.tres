@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://g5et4e3tqagn" path="res://img/Knight/KnightRun_strip-removebg-preview.png" id="3_vvjwx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qxvu7"]
-load_path = "res://.godot/imported/KnightAttack_strip.png-b2428d6b0286c9ea15d556f2f0bd462e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qvkhn"]
 atlas = SubResource("CompressedTexture2D_qxvu7")
