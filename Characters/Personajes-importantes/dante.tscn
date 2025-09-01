@@ -17,6 +17,8 @@ shape = SubResource("RectangleShape2D_yqri2")
 position = Vector2(-3, 1)
 sprite_frames = ExtResource("1_r22qc")
 animation = &"attack"
+frame = 21
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
