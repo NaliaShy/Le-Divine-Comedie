@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://icymu30rmmis"
-path="res://.godot/imported/jump_landing.png-44de8df5dc1836b5d239b0424e2fb09a.ctex"
+path="res://.godot/imported/jump_landing.png-1d6a7ca8ce3ff1f2e43212e005c0c80d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Enemy04/jump_landing.png"
-dest_files=["res://.godot/imported/jump_landing.png-44de8df5dc1836b5d239b0424e2fb09a.ctex"]
+source_file="res://ASSETS/img/Enemy04/jump_landing.png"
+dest_files=["res://.godot/imported/jump_landing.png-1d6a7ca8ce3ff1f2e43212e005c0c80d.ctex"]
 
 [params]
 

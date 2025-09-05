@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dd8mp2kmex6mi"
-path="res://.godot/imported/09_human_charging_1_loop.wav-c304f8bf11b716ba7c8b0b918b9dd047.sample"
+path="res://.godot/imported/09_human_charging_1_loop.wav-af09017053207088c25272b6214e5767.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/09_human_charging_1_loop.wav"
-dest_files=["res://.godot/imported/09_human_charging_1_loop.wav-c304f8bf11b716ba7c8b0b918b9dd047.sample"]
+source_file="res://ASSETS/sonidos/sonidos/09_human_charging_1_loop.wav"
+dest_files=["res://.godot/imported/09_human_charging_1_loop.wav-af09017053207088c25272b6214e5767.sample"]
 
 [params]
 

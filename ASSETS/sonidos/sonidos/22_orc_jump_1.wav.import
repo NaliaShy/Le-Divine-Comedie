@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpa75ispnfqwb"
-path="res://.godot/imported/22_orc_jump_1.wav-69ecc965664c4f463e7c4edd27696139.sample"
+path="res://.godot/imported/22_orc_jump_1.wav-fa5bd7920871443199ae0d68c01eb2b7.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/22_orc_jump_1.wav"
-dest_files=["res://.godot/imported/22_orc_jump_1.wav-69ecc965664c4f463e7c4edd27696139.sample"]
+source_file="res://ASSETS/sonidos/sonidos/22_orc_jump_1.wav"
+dest_files=["res://.godot/imported/22_orc_jump_1.wav-fa5bd7920871443199ae0d68c01eb2b7.sample"]
 
 [params]
 

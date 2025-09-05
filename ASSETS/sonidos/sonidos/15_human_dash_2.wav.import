@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://4t54h101ksmy"
-path="res://.godot/imported/15_human_dash_2.wav-38522ba91f0d9541a530b8557dd44ba8.sample"
+path="res://.godot/imported/15_human_dash_2.wav-bfefbecafecd062ecd7f00ae0c3c323b.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/15_human_dash_2.wav"
-dest_files=["res://.godot/imported/15_human_dash_2.wav-38522ba91f0d9541a530b8557dd44ba8.sample"]
+source_file="res://ASSETS/sonidos/sonidos/15_human_dash_2.wav"
+dest_files=["res://.godot/imported/15_human_dash_2.wav-bfefbecafecd062ecd7f00ae0c3c323b.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b3v441q8c7nh2"
-path="res://.godot/imported/13_human_jump_land_2.wav-d8cecbc2697d3140ab0c36690ebb4946.sample"
+path="res://.godot/imported/13_human_jump_land_2.wav-c6f36882da8b177015f7a7133cfecda6.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/13_human_jump_land_2.wav"
-dest_files=["res://.godot/imported/13_human_jump_land_2.wav-d8cecbc2697d3140ab0c36690ebb4946.sample"]
+source_file="res://ASSETS/sonidos/sonidos/13_human_jump_land_2.wav"
+dest_files=["res://.godot/imported/13_human_jump_land_2.wav-c6f36882da8b177015f7a7133cfecda6.sample"]
 
 [params]
 

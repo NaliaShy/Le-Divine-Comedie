@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6ilol1otbpey"
-path="res://.godot/imported/attack_in_jump06.png-44b2dc2895c8986315645b629794ece2.ctex"
+path="res://.godot/imported/attack_in_jump06.png-ff3f92875ef52a68fd5d05fc06b77a0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Gino Character/PNG/Attack in jump/attack_in_jump06.png"
-dest_files=["res://.godot/imported/attack_in_jump06.png-44b2dc2895c8986315645b629794ece2.ctex"]
+source_file="res://ASSETS/img/Gino Character/PNG/Attack in jump/attack_in_jump06.png"
+dest_files=["res://.godot/imported/attack_in_jump06.png-ff3f92875ef52a68fd5d05fc06b77a0c.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://br0id171q4tcc"
-path="res://.godot/imported/WAV_Abode_of_the_Immortal_A.wav-d6f7a16f0265a226d7885b5ae0a2e4c1.sample"
+path="res://.godot/imported/WAV_Abode_of_the_Immortal_A.wav-a22bdba19c30b2c3e5c81b184431aa4a.sample"
 
 [deps]
 
-source_file="res://sonidos/Ambientacion-fondo/WAV_Abode_of_the_Immortal_A.wav"
-dest_files=["res://.godot/imported/WAV_Abode_of_the_Immortal_A.wav-d6f7a16f0265a226d7885b5ae0a2e4c1.sample"]
+source_file="res://ASSETS/sonidos/Ambientacion-fondo/WAV_Abode_of_the_Immortal_A.wav"
+dest_files=["res://.godot/imported/WAV_Abode_of_the_Immortal_A.wav-a22bdba19c30b2c3e5c81b184431aa4a.sample"]
 
 [params]
 

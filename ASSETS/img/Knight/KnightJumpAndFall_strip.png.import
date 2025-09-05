@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccllfa8allcwv"
-path="res://.godot/imported/KnightJumpAndFall_strip.png-35fc5e762af6deb9ff62dc8e4204bd4b.ctex"
+path="res://.godot/imported/KnightJumpAndFall_strip.png-20e86e9ba999ba19bd37b0291023c78e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Knight/KnightJumpAndFall_strip.png"
-dest_files=["res://.godot/imported/KnightJumpAndFall_strip.png-35fc5e762af6deb9ff62dc8e4204bd4b.ctex"]
+source_file="res://ASSETS/img/Knight/KnightJumpAndFall_strip.png"
+dest_files=["res://.godot/imported/KnightJumpAndFall_strip.png-20e86e9ba999ba19bd37b0291023c78e.ctex"]
 
 [params]
 

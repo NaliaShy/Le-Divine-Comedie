@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpb2838tkldop"
-path="res://.godot/imported/20_orc_special_atk.wav-344ec18407ff0f5c071fc19cded56324.sample"
+path="res://.godot/imported/20_orc_special_atk.wav-25fbdd0dd4f316a2bdeac67fdb57cd8f.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/20_orc_special_atk.wav"
-dest_files=["res://.godot/imported/20_orc_special_atk.wav-344ec18407ff0f5c071fc19cded56324.sample"]
+source_file="res://ASSETS/sonidos/sonidos/20_orc_special_atk.wav"
+dest_files=["res://.godot/imported/20_orc_special_atk.wav-25fbdd0dd4f316a2bdeac67fdb57cd8f.sample"]
 
 [params]
 

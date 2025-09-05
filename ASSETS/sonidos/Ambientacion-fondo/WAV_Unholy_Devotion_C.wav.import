@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://fml2q0ipunn0"
-path="res://.godot/imported/WAV_Unholy_Devotion_C.wav-43362bc9f997f9d554048a46570a78e4.sample"
+path="res://.godot/imported/WAV_Unholy_Devotion_C.wav-d4aa3020fcb56dd7dd0ffcfdca055ca1.sample"
 
 [deps]
 
-source_file="res://sonidos/Ambientacion-fondo/WAV_Unholy_Devotion_C.wav"
-dest_files=["res://.godot/imported/WAV_Unholy_Devotion_C.wav-43362bc9f997f9d554048a46570a78e4.sample"]
+source_file="res://ASSETS/sonidos/Ambientacion-fondo/WAV_Unholy_Devotion_C.wav"
+dest_files=["res://.godot/imported/WAV_Unholy_Devotion_C.wav-d4aa3020fcb56dd7dd0ffcfdca055ca1.sample"]
 
 [params]
 

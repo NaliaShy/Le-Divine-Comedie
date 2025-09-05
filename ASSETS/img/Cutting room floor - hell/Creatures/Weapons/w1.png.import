@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ncsx5jjk6j6o"
-path="res://.godot/imported/w1.png-29bef8463b8648838ad8f978edf360a8.ctex"
+path="res://.godot/imported/w1.png-df48abf178db0176e702eae4ee416e4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Cutting room floor - hell/Creatures/Weapons/w1.png"
-dest_files=["res://.godot/imported/w1.png-29bef8463b8648838ad8f978edf360a8.ctex"]
+source_file="res://ASSETS/img/Cutting room floor - hell/Creatures/Weapons/w1.png"
+dest_files=["res://.godot/imported/w1.png-df48abf178db0176e702eae4ee416e4a.ctex"]
 
 [params]
 

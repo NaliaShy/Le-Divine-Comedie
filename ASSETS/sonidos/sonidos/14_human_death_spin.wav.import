@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bn2d0bats8g07"
-path="res://.godot/imported/14_human_death_spin.wav-dc12fd68d62d64240a17e51ec8c277cd.sample"
+path="res://.godot/imported/14_human_death_spin.wav-3e380dfac5cf2d932ec77f7f626b6fae.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/14_human_death_spin.wav"
-dest_files=["res://.godot/imported/14_human_death_spin.wav-dc12fd68d62d64240a17e51ec8c277cd.sample"]
+source_file="res://ASSETS/sonidos/sonidos/14_human_death_spin.wav"
+dest_files=["res://.godot/imported/14_human_death_spin.wav-3e380dfac5cf2d932ec77f7f626b6fae.sample"]
 
 [params]
 

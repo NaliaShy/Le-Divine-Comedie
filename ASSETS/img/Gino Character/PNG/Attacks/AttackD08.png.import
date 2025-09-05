@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djupivw443h2h"
-path="res://.godot/imported/AttackD08.png-852dcb036fee6b5441f067a6203dfb17.ctex"
+path="res://.godot/imported/AttackD08.png-a3eaab9bdcbf8065f5479e84991eefab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Gino Character/PNG/Attacks/AttackD08.png"
-dest_files=["res://.godot/imported/AttackD08.png-852dcb036fee6b5441f067a6203dfb17.ctex"]
+source_file="res://ASSETS/img/Gino Character/PNG/Attacks/AttackD08.png"
+dest_files=["res://.godot/imported/AttackD08.png-a3eaab9bdcbf8065f5479e84991eefab.ctex"]
 
 [params]
 

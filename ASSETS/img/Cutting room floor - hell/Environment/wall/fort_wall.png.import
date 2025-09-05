@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6aq42klqp8pc"
-path="res://.godot/imported/fort_wall.png-d81cfd069463c91ce7811f5dea6b3401.ctex"
+path="res://.godot/imported/fort_wall.png-83559a427d7564ad4a609c961f47d200.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Cutting room floor - hell/Environment/wall/fort_wall.png"
-dest_files=["res://.godot/imported/fort_wall.png-d81cfd069463c91ce7811f5dea6b3401.ctex"]
+source_file="res://ASSETS/img/Cutting room floor - hell/Environment/wall/fort_wall.png"
+dest_files=["res://.godot/imported/fort_wall.png-83559a427d7564ad4a609c961f47d200.ctex"]
 
 [params]
 

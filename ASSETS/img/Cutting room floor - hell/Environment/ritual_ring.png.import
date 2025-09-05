@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2yiei0t75rb3"
-path="res://.godot/imported/ritual_ring.png-4a8fa226dd887d2b1785e7db0f3d4098.ctex"
+path="res://.godot/imported/ritual_ring.png-9d762d6c5b94be95adc70acacfa5de4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Cutting room floor - hell/Environment/ritual_ring.png"
-dest_files=["res://.godot/imported/ritual_ring.png-4a8fa226dd887d2b1785e7db0f3d4098.ctex"]
+source_file="res://ASSETS/img/Cutting room floor - hell/Environment/ritual_ring.png"
+dest_files=["res://.godot/imported/ritual_ring.png-9d762d6c5b94be95adc70acacfa5de4e.ctex"]
 
 [params]
 

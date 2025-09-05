@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c73u0ldb3mm3i"
-path="res://.godot/imported/bridge.png-5627e77a9656225569a0f48a5f5519a6.ctex"
+path="res://.godot/imported/bridge.png-336e56314ffd326dc64936d7f4ba6f97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Cutting room floor - hell/Environment/bridge.png"
-dest_files=["res://.godot/imported/bridge.png-5627e77a9656225569a0f48a5f5519a6.ctex"]
+source_file="res://ASSETS/img/Cutting room floor - hell/Environment/bridge.png"
+dest_files=["res://.godot/imported/bridge.png-336e56314ffd326dc64936d7f4ba6f97.ctex"]
 
 [params]
 

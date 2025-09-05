@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bnt10pwcr7yht"
-path="res://.godot/imported/WAV_Eternal_Thirst_A_Variant.wav-aa97e7f7dbc179504405e076428a4668.sample"
+path="res://.godot/imported/WAV_Eternal_Thirst_A_Variant.wav-f495cfa61365da76f4910e134485ed3c.sample"
 
 [deps]
 
-source_file="res://sonidos/Ambientacion-fondo/WAV_Eternal_Thirst_A_Variant.wav"
-dest_files=["res://.godot/imported/WAV_Eternal_Thirst_A_Variant.wav-aa97e7f7dbc179504405e076428a4668.sample"]
+source_file="res://ASSETS/sonidos/Ambientacion-fondo/WAV_Eternal_Thirst_A_Variant.wav"
+dest_files=["res://.godot/imported/WAV_Eternal_Thirst_A_Variant.wav-f495cfa61365da76f4910e134485ed3c.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3abmpl8fus5t"
-path="res://.godot/imported/KnightAttack_strip-Photoroom.png-6c855d9764cc25e7e123fda317114f9f.ctex"
+path="res://.godot/imported/KnightAttack_strip-Photoroom.png-21851b8e3ecc190bc0e6cf290724396f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Knight/KnightAttack_strip-Photoroom.png"
-dest_files=["res://.godot/imported/KnightAttack_strip-Photoroom.png-6c855d9764cc25e7e123fda317114f9f.ctex"]
+source_file="res://ASSETS/img/Knight/KnightAttack_strip-Photoroom.png"
+dest_files=["res://.godot/imported/KnightAttack_strip-Photoroom.png-21851b8e3ecc190bc0e6cf290724396f.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jgw8q84sym0j"
-path="res://.godot/imported/01_chest_open_3.wav-e583e9363df73cb9d19e90098276e1d2.sample"
+path="res://.godot/imported/01_chest_open_3.wav-00107d6eb8a20714522788ac84cc761e.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/01_chest_open_3.wav"
-dest_files=["res://.godot/imported/01_chest_open_3.wav-e583e9363df73cb9d19e90098276e1d2.sample"]
+source_file="res://ASSETS/sonidos/sonidos/01_chest_open_3.wav"
+dest_files=["res://.godot/imported/01_chest_open_3.wav-00107d6eb8a20714522788ac84cc761e.sample"]
 
 [params]
 

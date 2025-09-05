@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccexdsyvoe2q7"
-path="res://.godot/imported/w_side_r3.png-e9d9a5caddf5a26def479096a16ad3d0.ctex"
+path="res://.godot/imported/w_side_r3.png-5fda9736da3f4095d8574252ea6be7ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Cutting room floor - hell/Environment/wall/w_side_r3.png"
-dest_files=["res://.godot/imported/w_side_r3.png-e9d9a5caddf5a26def479096a16ad3d0.ctex"]
+source_file="res://ASSETS/img/Cutting room floor - hell/Environment/wall/w_side_r3.png"
+dest_files=["res://.godot/imported/w_side_r3.png-5fda9736da3f4095d8574252ea6be7ea.ctex"]
 
 [params]
 

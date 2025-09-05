@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cejj23ajko6ur"
-path="res://.godot/imported/jump_mid02.png-0e5d9f10de93d335087635a748f09cd9.ctex"
+path="res://.godot/imported/jump_mid02.png-ce2990b327d758c06d43ab1cd2370702.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Gino Character/PNG/Idle, run, jump/jump_mid02.png"
-dest_files=["res://.godot/imported/jump_mid02.png-0e5d9f10de93d335087635a748f09cd9.ctex"]
+source_file="res://ASSETS/img/Gino Character/PNG/Idle, run, jump/jump_mid02.png"
+dest_files=["res://.godot/imported/jump_mid02.png-ce2990b327d758c06d43ab1cd2370702.ctex"]
 
 [params]
 

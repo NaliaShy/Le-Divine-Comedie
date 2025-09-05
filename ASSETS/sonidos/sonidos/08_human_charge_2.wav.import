@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://5av7bthsbnwq"
-path="res://.godot/imported/08_human_charge_2.wav-ec854b6362fa8faaa6782e211a3faa32.sample"
+path="res://.godot/imported/08_human_charge_2.wav-84c8683f5845ba9613f0b289e423bbb6.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/08_human_charge_2.wav"
-dest_files=["res://.godot/imported/08_human_charge_2.wav-ec854b6362fa8faaa6782e211a3faa32.sample"]
+source_file="res://ASSETS/sonidos/sonidos/08_human_charge_2.wav"
+dest_files=["res://.godot/imported/08_human_charge_2.wav-84c8683f5845ba9613f0b289e423bbb6.sample"]
 
 [params]
 

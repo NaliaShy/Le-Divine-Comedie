@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://wcgg7srsxnl3"
-path="res://.godot/imported/21_orc_damage_2.wav-47b45977c8b92cb0b33fc881c15a655b.sample"
+path="res://.godot/imported/21_orc_damage_2.wav-000eb1f26bb98c9d8570fd607166fcd3.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/21_orc_damage_2.wav"
-dest_files=["res://.godot/imported/21_orc_damage_2.wav-47b45977c8b92cb0b33fc881c15a655b.sample"]
+source_file="res://ASSETS/sonidos/sonidos/21_orc_damage_2.wav"
+dest_files=["res://.godot/imported/21_orc_damage_2.wav-000eb1f26bb98c9d8570fd607166fcd3.sample"]
 
 [params]
 

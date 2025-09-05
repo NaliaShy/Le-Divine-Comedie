@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1cglrlxvrin8"
-path="res://.godot/imported/ledge_grab.png-079a51bf2a934811efdc1e54c23297b7.ctex"
+path="res://.godot/imported/ledge_grab.png-8d2a24a82fcd85d28c0e2f275f4922a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Gino Character/PNG/Ledge grab/ledge_grab.png"
-dest_files=["res://.godot/imported/ledge_grab.png-079a51bf2a934811efdc1e54c23297b7.ctex"]
+source_file="res://ASSETS/img/Gino Character/PNG/Ledge grab/ledge_grab.png"
+dest_files=["res://.godot/imported/ledge_grab.png-8d2a24a82fcd85d28c0e2f275f4922a8.ctex"]
 
 [params]
 

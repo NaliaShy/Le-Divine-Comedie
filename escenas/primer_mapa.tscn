@@ -4,7 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://dlsviwhurunr2" path="res://escenas/mapabase.tscn" id="1_fxic2"]
 [ext_resource type="PackedScene" uid="uid://dwfsn6v5enmrd" path="res://Characters/Personajes-importantes/dante.tscn" id="2_tsmr2"]
 [ext_resource type="PackedScene" uid="uid://7rkqsekniy52" path="res://Characters/enemigos-beta/enemigo_infierno_beta.tscn" id="3_tsmr2"]
-[ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://img/negro.jpg" id="5_lgifv"]
+[ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://ASSETS/img/negro.jpg" id="5_lgifv"]
+
+[sub_resource type="Animation" id="Animation_v4h57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_lgifv"]
 resource_name = "fade_out"
@@ -20,21 +35,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(3.03144, 3.03144),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_v4h57"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1tvro"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvt3dsg52tvce"]
+
+[ext_resource type="Script" uid="uid://ci6gpuqcu6ftb" path="res://Scripts/mostrar_dialogo.gd" id="1_ooopt"]
+[ext_resource type="PackedScene" uid="uid://dlsviwhurunr2" path="res://escenas/mapabase.tscn" id="2_r3vwl"]
+[ext_resource type="PackedScene" uid="uid://dwfsn6v5enmrd" path="res://Characters/Personajes-importantes/dante.tscn" id="3_tlvhg"]
+[ext_resource type="PackedScene" uid="uid://7rkqsekniy52" path="res://Characters/enemigos-beta/enemigo_infierno_beta.tscn" id="4_eoj31"]
+[ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://img/negro.jpg" id="5_oot51"]
+[ext_resource type="Script" uid="uid://dd742kfuthmq3" path="res://escenas/next_final.gd" id="6_r3vwl"]
+
+[sub_resource type="Animation" id="Animation_v4h57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lgifv"]
+resource_name = "fade_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(3.03144, 3.03144),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tvro"]
+_data = {
+&"RESET": SubResource("Animation_v4h57"),
+&"fade_out": SubResource("Animation_lgifv")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r605d"]
+size = Vector2(36, 20)
+
+[node name="Primer-Mapa" type="Node2D"]
+script = ExtResource("1_ooopt")
+
+[node name="mapabase" parent="." instance=ExtResource("2_r3vwl")]
+position = Vector2(86, -2)
+scale = Vector2(2, 2)
+
+[node name="Dante" parent="." instance=ExtResource("3_tlvhg")]
+position = Vector2(328, -26)
+up_direction = Vector2(0, 1)
+
+[node name="Enemigo-infierno-beta" parent="." instance=ExtResource("4_eoj31")]
+position = Vector2(-56, -79)
+scale = Vector2(0.75, 0.75)
+
+[node name="negro" type="Sprite2D" parent="."]
+position = Vector2(399, -24)
+texture = ExtResource("5_oot51")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="negro"]
+libraries = {
+&"": SubResource("AnimationLibrary_1tvro")
+}
+autoplay = "fade_out"
+
+[node name="next_final" type="Area2D" parent="."]
+script = ExtResource("6_r3vwl")
+next_scene = "res://escenas/Limbo.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next_final"]
+position = Vector2(-367, -146)
+shape = SubResource("RectangleShape2D_r605d")
+
+[connection signal="body_entered" from="next_final" to="next_final" method="_on_body_entered"]

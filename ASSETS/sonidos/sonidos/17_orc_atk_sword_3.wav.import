@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b026coadirl03"
-path="res://.godot/imported/17_orc_atk_sword_3.wav-49b9519cc1e48f924a6c0c26bd816fe2.sample"
+path="res://.godot/imported/17_orc_atk_sword_3.wav-b61e6aeade5163245868478357487715.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/17_orc_atk_sword_3.wav"
-dest_files=["res://.godot/imported/17_orc_atk_sword_3.wav-49b9519cc1e48f924a6c0c26bd816fe2.sample"]
+source_file="res://ASSETS/sonidos/sonidos/17_orc_atk_sword_3.wav"
+dest_files=["res://.godot/imported/17_orc_atk_sword_3.wav-b61e6aeade5163245868478357487715.sample"]
 
 [params]
 

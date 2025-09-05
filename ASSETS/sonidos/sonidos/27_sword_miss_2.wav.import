@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://sk0cqkjsc334"
-path="res://.godot/imported/27_sword_miss_2.wav-b8df699e89f92ea532e3f6cc17059482.sample"
+path="res://.godot/imported/27_sword_miss_2.wav-b42c5811be86d33351ae1d98ad62e404.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/27_sword_miss_2.wav"
-dest_files=["res://.godot/imported/27_sword_miss_2.wav-b8df699e89f92ea532e3f6cc17059482.sample"]
+source_file="res://ASSETS/sonidos/sonidos/27_sword_miss_2.wav"
+dest_files=["res://.godot/imported/27_sword_miss_2.wav-b42c5811be86d33351ae1d98ad62e404.sample"]
 
 [params]
 

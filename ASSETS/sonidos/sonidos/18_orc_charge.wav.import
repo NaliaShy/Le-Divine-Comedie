@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpjfum0orx1fv"
-path="res://.godot/imported/18_orc_charge.wav-980ae5f08ba9eb599fc3229b1f768736.sample"
+path="res://.godot/imported/18_orc_charge.wav-cd094db92af9e383de34d6e50f765624.sample"
 
 [deps]
 
-source_file="res://sonidos/sonidos/18_orc_charge.wav"
-dest_files=["res://.godot/imported/18_orc_charge.wav-980ae5f08ba9eb599fc3229b1f768736.sample"]
+source_file="res://ASSETS/sonidos/sonidos/18_orc_charge.wav"
+dest_files=["res://.godot/imported/18_orc_charge.wav-cd094db92af9e383de34d6e50f765624.sample"]
 
 [params]
 
