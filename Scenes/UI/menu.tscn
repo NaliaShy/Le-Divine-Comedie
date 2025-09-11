@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bys5uw07ak13t"]
+[gd_scene load_steps=11 format=3 uid="uid://bys5uw07ak13t"]
 
 [ext_resource type="Script" uid="uid://diaqdmhxmxn8k" path="res://Scripts/UI/menu.gd" id="1_vdanu"]
 [ext_resource type="Texture2D" uid="uid://dnxh5olsujtwn" path="res://Assets/Art/bg_menu.png" id="2_wuk0b"]
 [ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://Assets/Art/negro.jpg" id="3_t1b1y"]
 [ext_resource type="Texture2D" uid="uid://bpwgsktlkjpj" path="res://Assets/Art/titulo.png" id="4_ugp1d"]
+[ext_resource type="AudioStream" uid="uid://b30g8u7fnglt4" path="res://Archivos-externos/Music/WAV_Abode_of_the_Immortal_B.wav" id="5_tjcm1"]
 
 [sub_resource type="Theme" id="Theme_6cq3m"]
 default_font_size = 0
@@ -130,6 +131,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_56ah5")
 }
 autoplay = "fade_out"
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tjcm1")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Nueva partida" to="." method="_on_nueva_partida_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bfg6gd3hpm82d"]
+[gd_scene load_steps=24 format=4 uid="uid://bfg6gd3hpm82d"]
 
 [ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://Assets/Art/negro.jpg" id="1_lhp8x"]
 [ext_resource type="Texture2D" uid="uid://bgasnlmab18o8" path="res://Resourses/DarkDungeon.png" id="1_uhnng"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://veq3tjy0guvt" path="res://Scenes/Enemies/spwan_serpi.tscn" id="6_y2g0b"]
 [ext_resource type="Script" uid="uid://b8m4uo0tqweam" path="res://Scenes/Levels/heal_area.gd" id="10_axxwr"]
 [ext_resource type="Texture2D" uid="uid://63ljpa4oblo3" path="res://Assets/vida-Pollo-removebg-preview.png" id="11_x1yyt"]
+[ext_resource type="AudioStream" uid="uid://bnfj22jcy6ulk" path="res://Archivos-externos/Music/WAV_Unholy_Devotion_A.wav" id="12_x1yyt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bd668"]
 texture = ExtResource("1_uhnng")
@@ -4924,9 +4925,6 @@ tile_set = SubResource("TileSet_0poc8")
 tile_map_data = PackedByteArray("AAA1ACQAAAAFAAcAAAA1ACUAAAAFAAgAAAA1ACYAAAAFAAkAAAA2ACQAAAAGAAcAAAA2ACUAAAAGAAgAAAA2ACYAAAAGAAkAAAA3ACQAAAAHAAcAAAA3ACUAAAAHAAgAAAA3ACYAAAAHAAkAAAA4ACQAAAAIAAcAAAA4ACUAAAAIAAgAAAA4ACYAAAAIAAkAAAA5ACQAAAAFAAcAAAA5ACUAAAAFAAgAAAA5ACYAAAAFAAkAAAA6ACQAAAAGAAcAAAA6ACUAAAAGAAgAAAA6ACYAAAAGAAkAAAA7ACQAAAAHAAcAAAA7ACUAAAAHAAgAAAA7ACYAAAAHAAkAAAA8ACQAAAAIAAcAAAA8ACUAAAAIAAgAAAA8ACYAAAAIAAkAAAA=")
 tile_set = SubResource("TileSet_0pieo")
 
-[node name="Dante" parent="." instance=ExtResource("3_bd668")]
-position = Vector2(157, 525)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_ksqlq")]
 position = Vector2(94, 37)
 
@@ -4938,6 +4936,9 @@ tile_map_data = PackedByteArray("AAAAACcAAAADAAMAAAAAACgAAAADAAIAAAABACcAAAAEAAE
 tile_set = SubResource("TileSet_5hpch")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
+
+[node name="Dante" parent="." instance=ExtResource("3_bd668")]
+position = Vector2(150, 557)
 
 [node name="next_m1" type="Area2D" parent="."]
 script = ExtResource("5_cgu05")
@@ -5032,6 +5033,10 @@ shape = SubResource("CircleShape2D_kjwcf")
 position = Vector2(587.04, 262.625)
 scale = Vector2(0.03, 0.0315476)
 texture = ExtResource("11_x1yyt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_x1yyt")
+autoplay = true
 
 [connection signal="body_entered" from="next_m1" to="next_m1" method="_on_body_entered"]
 [connection signal="body_entered" from="next_boss" to="next_boss" method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bqn7ofaaccx3f"]
+[gd_scene load_steps=24 format=4 uid="uid://bqn7ofaaccx3f"]
 
 [ext_resource type="Texture2D" uid="uid://tn1efs358r0f" path="res://Resourses/2dpixx_ccart_dark_mountain_tiles.png" id="1_1ac00"]
 [ext_resource type="Script" uid="uid://ci6gpuqcu6ftb" path="res://Scripts/Gameplay/mostrar_dialogo.gd" id="1_sf3w7"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c0w12jonfo81j" path="res://Scenes/Characters/virgilio.tscn" id="9_aaj5c"]
 [ext_resource type="Script" uid="uid://b8m4uo0tqweam" path="res://Scenes/Levels/heal_area.gd" id="10_lkt8r"]
 [ext_resource type="Texture2D" uid="uid://63ljpa4oblo3" path="res://Assets/vida-Pollo-removebg-preview.png" id="11_lkt8r"]
+[ext_resource type="AudioStream" uid="uid://ncwp7t2k4a1v" path="res://Archivos-externos/Music/WAV_Veil_of_Shadows_B.wav" id="12_hncik"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67bck"]
 texture = ExtResource("1_1ac00")
@@ -9468,6 +9469,10 @@ shape = SubResource("CircleShape2D_el8mu")
 position = Vector2(393.04, 150.625)
 scale = Vector2(0.03, 0.0315476)
 texture = ExtResource("11_lkt8r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_hncik")
+autoplay = true
 
 [connection signal="body_entered" from="next_m2" to="next_m2" method="_on_body_entered"]
 [connection signal="body_entered" from="HealArea14" to="HealArea14" method="_on_body_entered"]

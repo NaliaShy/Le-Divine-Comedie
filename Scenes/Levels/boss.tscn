@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cvt3dsg52tvce"]
+[gd_scene load_steps=14 format=3 uid="uid://cvt3dsg52tvce"]
 
 [ext_resource type="PackedScene" uid="uid://dlsviwhurunr2" path="res://Scenes/Levels/mapabase.tscn" id="2_r3vwl"]
 [ext_resource type="PackedScene" uid="uid://dwfsn6v5enmrd" path="res://Scenes/Characters/dante.tscn" id="3_tlvhg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dd742kfuthmq3" path="res://Scripts/Gameplay/next_final.gd" id="6_r3vwl"]
 [ext_resource type="Script" uid="uid://b8m4uo0tqweam" path="res://Scenes/Levels/heal_area.gd" id="6_u5wos"]
 [ext_resource type="Texture2D" uid="uid://cvk6b3h5dtikn" path="res://Assets/vida-Pocion-roja-removebg-preview.png" id="7_66tkl"]
+[ext_resource type="AudioStream" uid="uid://dvdpcrfl8ni2t" path="res://Archivos-externos/Music/WAV_Unholy_Devotion_D.wav" id="8_cn6wl"]
 
 [sub_resource type="Animation" id="Animation_v4h57"]
 length = 0.001
@@ -191,6 +192,10 @@ shape = SubResource("CircleShape2D_66tkl")
 position = Vector2(-705, -82)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("7_66tkl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_cn6wl")
+autoplay = true
 
 [connection signal="body_entered" from="next_final" to="next_final" method="_on_body_entered"]
 [connection signal="body_entered" from="HealArea" to="HealArea" method="_on_body_entered"]
