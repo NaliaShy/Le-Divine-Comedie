@@ -1,0 +1,27 @@
+~ start
+Dante: ¿Quién eres tú?... ¿También estás atrapado aquí?
+Virgilio: No, Dante. Yo no estoy atrapado.
+Virgilio: He venido a guiarte a través de lo que no comprendes.
+Virgilio: Lo que ves no es un sueño, ni una ilusión.
+Virgilio: Has dejado atrás la vida de los mortales.
+Virgilio: Y ahora, solo tu alma continúa este viaje.
+Dante: ¿Muerto...? No... ¡No puede ser!
+- No pienso creerlo!
+	Dante: ¡No pienso creerlo!
+	Virgilio: La negación es natural... pero no cambia la verdad.
+	Virgilio: Puedes cerrar los ojos, pero la oscuridad seguirá rodeándote.
+	=> END
+- Si es cierto... ¿qué pasará conmigo?
+	Dante: Si es cierto... ¿qué pasará conmigo?
+	Virgilio: Un camino te espera, Dante. 
+	Virgilio: No todos llegan al mismo destino.
+	Virgilio: Yo estoy aquí para asegurar que alcances el tuyo.
+	=> END!
+- ¿Por qué debería confiar en ti?
+	Dante: ¿Por qué debería confiar en ti?
+	Virgilio: Porque, aunque dudes, soy el único que te ofrece un rumbo.
+	Virgilio: Quédate aquí si quieres... pero estas sombras no serán compasivas.
+	=> END!
+- (Irse)
+	=> END!
+=> END!

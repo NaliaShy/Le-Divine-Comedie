@@ -1,0 +1,203 @@
+[gd_scene load_steps=13 format=3 uid="uid://cvt3dsg52tvce"]
+
+[ext_resource type="PackedScene" uid="uid://dlsviwhurunr2" path="res://Scenes/Levels/mapabase.tscn" id="2_r3vwl"]
+[ext_resource type="PackedScene" uid="uid://dwfsn6v5enmrd" path="res://Scenes/Characters/dante.tscn" id="3_tlvhg"]
+[ext_resource type="PackedScene" uid="uid://7rkqsekniy52" path="res://Scenes/Enemies/enemigo_infierno_beta.tscn" id="4_eoj31"]
+[ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://Assets/Art/negro.jpg" id="5_oot51"]
+[ext_resource type="Script" uid="uid://dd742kfuthmq3" path="res://Scripts/Gameplay/next_final.gd" id="6_r3vwl"]
+[ext_resource type="Script" uid="uid://b8m4uo0tqweam" path="res://Scenes/Levels/heal_area.gd" id="6_u5wos"]
+[ext_resource type="Texture2D" uid="uid://cvk6b3h5dtikn" path="res://Assets/vida-Pocion-roja-removebg-preview.png" id="7_66tkl"]
+
+[sub_resource type="Animation" id="Animation_v4h57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lgifv"]
+resource_name = "fade_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(3.03144, 3.03144),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tvro"]
+_data = {
+&"RESET": SubResource("Animation_v4h57"),
+&"fade_out": SubResource("Animation_lgifv")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r605d"]
+size = Vector2(36, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_66tkl"]
+radius = 7.28011
+
+[node name="Primer-Mapa" type="Node2D"]
+
+[node name="Negro" type="Sprite2D" parent="."]
+position = Vector2(9.99999, 156)
+scale = Vector2(2.26797, 1.79722)
+texture = ExtResource("5_oot51")
+
+[node name="mapabase" parent="." instance=ExtResource("2_r3vwl")]
+position = Vector2(86, -2)
+scale = Vector2(2, 2)
+
+[node name="Dante" parent="." instance=ExtResource("3_tlvhg")]
+position = Vector2(328, -26)
+up_direction = Vector2(0, 1)
+
+[node name="Enemigo-infierno-beta" parent="." instance=ExtResource("4_eoj31")]
+position = Vector2(-56, -79)
+scale = Vector2(0.75, 0.75)
+
+[node name="negro" type="Sprite2D" parent="."]
+position = Vector2(219, -51)
+texture = ExtResource("5_oot51")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="negro"]
+libraries = {
+&"": SubResource("AnimationLibrary_1tvro")
+}
+autoplay = "fade_out"
+
+[node name="next_final" type="Area2D" parent="."]
+script = ExtResource("6_r3vwl")
+next_scene = "res://Scenes/Levels/Limbo.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next_final"]
+position = Vector2(-369, -137)
+shape = SubResource("RectangleShape2D_r605d")
+
+[node name="HealArea" type="Area2D" parent="."]
+position = Vector2(219, -51)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea"]
+position = Vector2(-790, -198)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea"]
+position = Vector2(-791, -198)
+scale = Vector2(0.03, 0.0315476)
+texture = ExtResource("7_66tkl")
+
+[node name="HealArea5" type="Area2D" parent="."]
+position = Vector2(219, -51)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea5"]
+position = Vector2(650, -95)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea5"]
+position = Vector2(650, -96)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_66tkl")
+
+[node name="HealArea6" type="Area2D" parent="."]
+position = Vector2(219, -51)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea6"]
+position = Vector2(495, -224)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea6"]
+position = Vector2(494, -225)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_66tkl")
+
+[node name="HealArea7" type="Area2D" parent="."]
+position = Vector2(219, -51)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea7"]
+position = Vector2(-339, -166)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea7"]
+position = Vector2(-339, -167)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_66tkl")
+
+[node name="HealArea8" type="Area2D" parent="."]
+position = Vector2(218, -49)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea8"]
+position = Vector2(-526, -17)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea8"]
+position = Vector2(-526, -18)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_66tkl")
+
+[node name="HealArea4" type="Area2D" parent="."]
+position = Vector2(636, -65)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea4"]
+position = Vector2(589, -17)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea4"]
+position = Vector2(589, -16)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_66tkl")
+
+[node name="HealArea3" type="Area2D" parent="."]
+position = Vector2(715, -277)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea3"]
+position = Vector2(-887, 30)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea3"]
+position = Vector2(-889, 28)
+scale = Vector2(0.03, 0.0238096)
+texture = ExtResource("7_66tkl")
+
+[node name="HealArea2" type="Area2D" parent="."]
+position = Vector2(134, -42)
+script = ExtResource("6_u5wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealArea2"]
+position = Vector2(-706, -78)
+shape = SubResource("CircleShape2D_66tkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealArea2"]
+position = Vector2(-705, -82)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_66tkl")
+
+[connection signal="body_entered" from="next_final" to="next_final" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea" to="HealArea" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea5" to="HealArea5" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea6" to="HealArea6" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea7" to="HealArea7" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea8" to="HealArea8" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea4" to="HealArea4" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea3" to="HealArea3" method="_on_body_entered"]
+[connection signal="body_entered" from="HealArea2" to="HealArea2" method="_on_body_entered"]

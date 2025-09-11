@@ -1,0 +1,135 @@
+[gd_scene load_steps=10 format=3 uid="uid://bys5uw07ak13t"]
+
+[ext_resource type="Script" uid="uid://diaqdmhxmxn8k" path="res://Scripts/UI/menu.gd" id="1_vdanu"]
+[ext_resource type="Texture2D" uid="uid://dnxh5olsujtwn" path="res://Assets/Art/bg_menu.png" id="2_wuk0b"]
+[ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://Assets/Art/negro.jpg" id="3_t1b1y"]
+[ext_resource type="Texture2D" uid="uid://bpwgsktlkjpj" path="res://Assets/Art/titulo.png" id="4_ugp1d"]
+
+[sub_resource type="Theme" id="Theme_6cq3m"]
+default_font_size = 0
+
+[sub_resource type="Animation" id="Animation_5t3kx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6cq3m"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.61918, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lgifv"]
+resource_name = "fade_out_gam"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.61918, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_56ah5"]
+_data = {
+&"RESET": SubResource("Animation_5t3kx"),
+&"fade_out": SubResource("Animation_6cq3m"),
+&"fade_out_gam": SubResource("Animation_lgifv")
+}
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdanu")
+metadata/_edit_vertical_guides_ = [64.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -7.0
+offset_right = 8.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wuk0b")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -536.693
+offset_top = -50.5
+offset_right = -255.808
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Nueva partida" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_6cq3m")
+text = "Nueva partida"
+alignment = 0
+
+[node name="Salir" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_6cq3m")
+text = "Salir
+"
+alignment = 0
+
+[node name="Titulo" type="Sprite2D" parent="."]
+position = Vector2(571, 555)
+scale = Vector2(1.06263, 1.47727)
+texture = ExtResource("4_ugp1d")
+
+[node name="negro" type="Sprite2D" parent="."]
+position = Vector2(585, 314)
+texture = ExtResource("3_t1b1y")
+
+[node name="fade-out" type="AnimationPlayer" parent="negro"]
+libraries = {
+&"": SubResource("AnimationLibrary_56ah5")
+}
+autoplay = "fade_out"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Nueva partida" to="." method="_on_nueva_partida_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

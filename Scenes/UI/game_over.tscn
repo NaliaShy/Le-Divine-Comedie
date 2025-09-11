@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtuatsekt7hil"]
+
+[ext_resource type="Script" uid="uid://bdtlfqw2qkp32" path="res://Scenes/UI/game_over.gd" id="1_jqelu"]
+[ext_resource type="Texture2D" uid="uid://dnxh5olsujtwn" path="res://Assets/Art/bg_menu.png" id="1_wpaxx"]
+[ext_resource type="Texture2D" uid="uid://c1dvyut4q4ip" path="res://Assets/Art/negro.jpg" id="2_jqelu"]
+
+[sub_resource type="Animation" id="Animation_5t3kx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6cq3m"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.61918, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lgifv"]
+resource_name = "fade_out_gam"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.61918, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_56ah5"]
+_data = {
+&"RESET": SubResource("Animation_5t3kx"),
+&"fade_out": SubResource("Animation_6cq3m"),
+&"fade_out_gam": SubResource("Animation_lgifv")
+}
+
+[node name="Game over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jqelu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -12.0
+offset_right = 13.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wpaxx")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 458.0
+offset_top = 276.0
+offset_right = 564.0
+offset_bottom = 304.0
+rotation = -0.000244532
+scale = Vector2(2.5, 2.5)
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 530.0
+offset_top = 343.0
+offset_right = 639.0
+offset_bottom = 374.0
+text = "Reintentar"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 530.0
+offset_top = 381.0
+offset_right = 639.0
+offset_bottom = 412.0
+text = "Salir al menu"
+
+[node name="negro" type="Sprite2D" parent="."]
+position = Vector2(625, 417)
+scale = Vector2(1.925, 1.89583)
+texture = ExtResource("2_jqelu")
+
+[node name="fade-out" type="AnimationPlayer" parent="negro"]
+libraries = {
+&"": SubResource("AnimationLibrary_56ah5")
+}
+autoplay = "fade_out"

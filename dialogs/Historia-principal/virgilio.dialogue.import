@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bgj3het1cdvov"
+path="res://.godot/imported/virgilio.dialogue-e4f060547849dbfdd9dadb92caad53b5.tres"
+
+[deps]
+
+source_file="res://dialogs/Historia-principal/virgilio.dialogue"
+dest_files=["res://.godot/imported/virgilio.dialogue-e4f060547849dbfdd9dadb92caad53b5.tres"]
+
+[params]
+
+defaults=true

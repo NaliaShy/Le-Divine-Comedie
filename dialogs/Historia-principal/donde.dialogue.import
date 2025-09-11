@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://2udb0db3u24u"
+path="res://.godot/imported/donde.dialogue-4b797dcc2460e0b3cb2d4337807fb6db.tres"
+
+[deps]
+
+source_file="res://dialogs/Historia-principal/donde.dialogue"
+dest_files=["res://.godot/imported/donde.dialogue-4b797dcc2460e0b3cb2d4337807fb6db.tres"]
+
+[params]
+
+defaults=true

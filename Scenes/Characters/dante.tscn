@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwfsn6v5enmrd"]
+
+[ext_resource type="SpriteFrames" uid="uid://di3byye8y5tj0" path="res://Animation/Dante-Animations.tres" id="1_r22qc"]
+[ext_resource type="Script" uid="uid://cs33dg3cw0fn7" path="res://Scripts/Characters/dante.gd" id="1_yqri2"]
+[ext_resource type="Texture2D" uid="uid://dcabdr56hfwuj" path="res://Scenes/UI/barra de vida vacia2.png" id="3_3iawv"]
+[ext_resource type="Texture2D" uid="uid://07vjbeesye5c" path="res://Scenes/UI/barra de vida llena2.png" id="4_kqbba"]
+[ext_resource type="Shader" uid="uid://dnyd48scibomn" path="res://Resourses/shader/dante.gdshader" id="5_kqbba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqri2"]
+size = Vector2(20, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42era"]
+size = Vector2(23, 33)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ja42"]
+shader = ExtResource("5_kqbba")
+shader_parameter/radius = 0.8
+shader_parameter/softness = 0.4
+shader_parameter/vignette_color = Color(0, 0, 0, 0.85)
+
+[node name="Dante" type="CharacterBody2D"]
+script = ExtResource("1_yqri2")
+
+[node name="Animaciones" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, 1)
+sprite_frames = ExtResource("1_r22qc")
+animation = &"death"
+frame = 14
+frame_progress = 1.0
+
+[node name="Hitbox-Dante" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 0)
+shape = SubResource("RectangleShape2D_yqri2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="AttackHitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+
+[node name="HitBox-Attack" type="CollisionShape2D" parent="AttackHitbox"]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_42era")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_left = -29.0
+offset_top = -29.0
+offset_right = 173.0
+offset_bottom = 43.0
+scale = Vector2(0.3, 0.3)
+texture_under = ExtResource("3_3iawv")
+texture_progress = ExtResource("4_kqbba")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_1ja42")
+offset_left = -2.0
+offset_right = 1157.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="animation_finished" from="Animaciones" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="sprite_frames_changed" from="Animaciones" to="." method="_on_animaciones_sprite_frames_changed"]
+[connection signal="area_entered" from="AttackHitbox" to="." method="_on_attack_hitbox_area_entered"]

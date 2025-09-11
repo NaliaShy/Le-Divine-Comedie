@@ -1,0 +1,113 @@
+[gd_scene load_steps=22 format=3 uid="uid://ihxrs3t06xy0"]
+
+[ext_resource type="Script" uid="uid://csmhl4poky07g" path="res://Murcielago.gd" id="1_s3nmo"]
+[ext_resource type="Texture2D" uid="uid://b0soh40ds1508" path="res://Archivos-externos/img/Enemy01/attack01.png" id="2_hcg50"]
+[ext_resource type="Texture2D" uid="uid://bhu1efaeu4pkn" path="res://Archivos-externos/img/Enemy01/attack02.png" id="3_7fh2c"]
+[ext_resource type="Texture2D" uid="uid://csy7g40to7hwp" path="res://Archivos-externos/img/Enemy01/attack03.png" id="4_kdafq"]
+[ext_resource type="Texture2D" uid="uid://blisbr5w35qxu" path="res://Archivos-externos/img/Enemy01/attack04.png" id="5_lbuqg"]
+[ext_resource type="Texture2D" uid="uid://5hlk7dd3na80" path="res://Archivos-externos/img/Enemy01/attack05.png" id="6_81gaf"]
+[ext_resource type="Texture2D" uid="uid://bgsyreop32i6v" path="res://Archivos-externos/img/Enemy01/attack06.png" id="7_7qypr"]
+[ext_resource type="Texture2D" uid="uid://bhxefhf2hs4pd" path="res://Archivos-externos/img/Enemy01/attack07.png" id="8_ph4kb"]
+[ext_resource type="Texture2D" uid="uid://q3tyf2y2x1pf" path="res://Archivos-externos/img/Enemy01/attack09.png" id="9_3lgm1"]
+[ext_resource type="Texture2D" uid="uid://cwwi6aysww7e3" path="res://Archivos-externos/img/Enemy01/attack08.png" id="10_gncbw"]
+[ext_resource type="Texture2D" uid="uid://gtntcsgqudk1" path="res://Archivos-externos/img/Enemy01/attack10.png" id="11_37cg4"]
+[ext_resource type="Texture2D" uid="uid://cgw1pxd0oon6a" path="res://Archivos-externos/img/Enemy01/fly01.png" id="12_c5aj4"]
+[ext_resource type="Texture2D" uid="uid://d1akgy4i2a7w3" path="res://Archivos-externos/img/Enemy01/fly02.png" id="13_j2xll"]
+[ext_resource type="Texture2D" uid="uid://dkc036wbkmrel" path="res://Archivos-externos/img/Enemy01/fly03.png" id="14_4fpgp"]
+[ext_resource type="Texture2D" uid="uid://d33882dfknqfr" path="res://Archivos-externos/img/Enemy01/fly04.png" id="15_o42ti"]
+[ext_resource type="Texture2D" uid="uid://xrjskq4nr45h" path="res://Archivos-externos/img/Enemy01/fly05.png" id="16_kdsjk"]
+[ext_resource type="Texture2D" uid="uid://boe28rjhtf0fk" path="res://Archivos-externos/img/Enemy01/fly06.png" id="17_5m2n2"]
+[ext_resource type="Texture2D" uid="uid://cufvx355twxca" path="res://Archivos-externos/img/Enemy01/fly07.png" id="18_6bfo8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x8ogf"]
+radius = 42.107
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q4w0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hcg50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7fh2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kdafq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lbuqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_81gaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7qypr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ph4kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3lgm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gncbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_37cg4")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_c5aj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j2xll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4fpgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o42ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kdsjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5m2n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6bfo8")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0ci8"]
+size = Vector2(11, 14)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_s3nmo")
+
+[node name="Detectar" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detectar"]
+shape = SubResource("CircleShape2D_x8ogf")
+one_way_collision_margin = 42.3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_q4w0x")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_n0ci8")
+
+[connection signal="body_entered" from="Detectar" to="." method="_on_detectar_body_entered"]
+[connection signal="body_exited" from="Detectar" to="." method="_on_body_exited"]
+[connection signal="body_exited" from="Detectar" to="." method="_on_detectar_body_exited"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

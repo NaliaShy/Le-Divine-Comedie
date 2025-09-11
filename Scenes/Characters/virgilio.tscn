@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0w12jonfo81j"]
+
+[ext_resource type="Texture2D" uid="uid://ci2ldg7hq08d" path="res://Assets/Art/virgilio.png" id="1_2ts2o"]
+[ext_resource type="Script" uid="uid://gq6dc24tqmpw" path="res://Scripts/Characters/virgilio.gd" id="1_lf3e8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf3e8"]
+atlas = ExtResource("1_2ts2o")
+region = Rect2(67, 0, 335, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gqfyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf3e8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fiq7m"]
+size = Vector2(52, 72)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lf3e8"]
+radius = 100.603
+
+[node name="Virgilio" type="CharacterBody2D"]
+script = ExtResource("1_lf3e8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -0.200002)
+scale = Vector2(0.15, 0.149219)
+sprite_frames = SubResource("SpriteFrames_gqfyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_fiq7m")
+
+[node name="radio" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="radio"]
+shape = SubResource("CircleShape2D_lf3e8")
+one_way_collision_margin = 42.3
+
+[connection signal="area_entered" from="radio" to="." method="_on_radio_area_entered"]
+[connection signal="body_entered" from="radio" to="." method="_on_radio_body_entered"]
